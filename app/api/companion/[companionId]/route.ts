@@ -31,8 +31,6 @@ export async function PATCH(
       return new NextResponse("Missing required fields", { status: 400 })
     }
 
-    // TODO: Check for subscriptions
-
     const companion = await prismadb.companion.update({
       where: { id: params.companionId, userId: user.id },
       data: {

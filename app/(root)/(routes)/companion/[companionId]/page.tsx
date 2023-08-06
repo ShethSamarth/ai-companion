@@ -17,8 +17,6 @@ const CompanionIdPage = async ({ params }: CompanionIdPageProps) => {
     return redirectToSignIn()
   }
 
-  // TODO: Check subscriptions
-
   const companion = await prismadb.companion.findUnique({
     where: { id: params.companionId, userId },
   })

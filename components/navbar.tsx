@@ -2,11 +2,9 @@
 
 import { Poppins } from "next/font/google"
 import Link from "next/link"
-import { Menu, Sparkles } from "lucide-react"
 import { UserButton } from "@clerk/nextjs"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toogle"
 import MobileSidebar from "@/components/mobile-sidebar"
 
@@ -29,10 +27,6 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex items-center gap-x-3">
-        <Button size="sm" variant="premium">
-          Upgrade
-          <Sparkles className="h-4 w-4 fill-white text-white ml-2" />
-        </Button>
         <ModeToggle />
         <UserButton afterSignOutUrl="/" />
       </div>

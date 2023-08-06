@@ -24,8 +24,6 @@ export async function POST(req: Request) {
       return new NextResponse("Missing required fields", { status: 400 })
     }
 
-    // TODO: Check for subscriptions
-
     const companion = await prismadb.companion.create({
       data: {
         categoryId,

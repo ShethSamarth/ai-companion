@@ -1,6 +1,6 @@
 "use client"
 
-import { Home, Plus, Settings } from "lucide-react"
+import { Home, Plus } from "lucide-react"
 import { usePathname, useRouter } from "next/navigation"
 
 import { cn } from "@/lib/utils"
@@ -22,17 +22,9 @@ const Sidebar = () => {
       label: "Create",
       pro: true,
     },
-    {
-      icon: Settings,
-      href: "/settings",
-      label: "Settings",
-      pro: false,
-    },
   ]
 
   const onNavigate = (url: string, pro: boolean) => {
-    // TODO: Check if pro
-
     return router.push(url)
   }
 
